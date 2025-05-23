@@ -3,9 +3,12 @@ name: Trigger Docker Build in Repo Two
 on:
   workflow_dispatch:
 
+env:
+  ENVIRONMENT: stage
+
 jobs:
   call-repo2:
     uses: abhishek7015/two/.github/workflows/docker-build.yml@main
     with:
-      environment: stage
+      environment: stage  # cannot use env.ENVIRONMENT here
     secrets: inherit
