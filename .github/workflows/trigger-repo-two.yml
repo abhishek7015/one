@@ -7,5 +7,5 @@ jobs:
   call-repo2:
     uses: abhishek7015/two/.github/workflows/docker-build.yml@main
     with:
-      environment: stage  # hardcoded, because you can't interpolate env here
+      environment: stage
     secrets: inherit
